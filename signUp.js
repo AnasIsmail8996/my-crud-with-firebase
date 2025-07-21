@@ -4,7 +4,10 @@
 import {auth, app, createUserWithEmailAndPassword, doc, setDoc, db} from './firebase.js';
 console.log(auth);
 console.log(app);
-
+const uid= localStorage.getItem('uid');
+if(uid){
+window.location.replace('./todo.html');
+}
 
 const  signUp= async()=>{
    try {

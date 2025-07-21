@@ -1,6 +1,11 @@
 // import { use } from "react";
 import { addDoc, db, doc, getDoc, collection, getDocs, deleteDoc, updateDoc } from "./firebase.js";
 
+
+const uid= localStorage.getItem('uid');
+if(!uid){
+window.location.replace('./signup.html');
+}
 let userData;
 
 const fetchUserData = async () => {

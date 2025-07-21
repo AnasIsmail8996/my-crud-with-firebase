@@ -1,6 +1,11 @@
 import {auth, signInWithEmailAndPassword }from './firebase.js'
 
 
+const uid= localStorage.getItem('uid');
+if(uid){
+window.location.replace('./todo.html');
+}
+
 const loginHandler=async()=>{
 try {
     

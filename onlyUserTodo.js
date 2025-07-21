@@ -1,5 +1,10 @@
 import {collection, db, doc, getDocs, query, updateDoc, where, deleteDoc}from './firebase.js'
 
+
+const uid= localStorage.getItem('uid');
+if(!uid){
+window.location.replace('./signup.html');
+}
 const userTodoOnly= async()=>{
 try {
     
